@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Toluwalase Iyekolo | Brand storyteller and content creator in Lagos</title>
+<meta name="description" content="Toluwalase Iyekolo is a Lagos-based creative working in brand storytelling, communications, social media management, marketing and video editing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#FAF4EF;--sand:#E8DAD3;--clay:#BFA692;--plum:#4A1424;--plum2:#5C2636;--ink:#2B0C16;color-scheme:light}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--cream);color:var(--ink);font:400 17px/1.65 Poppins,system-ui,sans-serif;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--plum);outline-offset:3px}
+.bb{font-family:'Bebas Neue',Impact,sans-serif;font-weight:400;line-height:.88;letter-spacing:.01em}
+header{position:fixed;inset:0 0 auto;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;background:rgba(250,244,239,.88);backdrop-filter:blur(8px)}
+header .logo{font-size:30px;text-decoration:none;color:var(--plum)}
+nav{display:flex;gap:26px;font-size:15px;font-weight:500}
+nav a{text-decoration:none}nav a:hover{text-decoration:underline;text-underline-offset:6px}
+.btn{display:inline-block;background:var(--plum);color:var(--cream);padding:13px 28px;border-radius:99px;text-decoration:none;font-weight:500;border:2px solid var(--plum);cursor:pointer;font:500 16px Poppins;transition:background .2s,color .2s}
+.btn:hover{background:transparent;color:var(--plum)}
+.btn.o{background:transparent;color:var(--plum)}.btn.o:hover{background:var(--plum);color:var(--cream)}
+/* hero */
+.hero{min-height:100svh;position:relative;display:grid;align-items:end;padding:120px 5vw 60px;overflow:hidden}
+.arc{position:absolute;border-radius:50%;pointer-events:none}
+.a1{width:70vmin;height:70vmin;background:var(--sand);right:-18vmin;top:-20vmin}
+.a2{width:90vmin;height:90vmin;border:1.5px solid var(--plum);right:-30vmin;top:-30vmin}
+.a3{width:60vmin;height:60vmin;background:var(--clay);right:-12vmin;bottom:-24vmin;opacity:.7}
+.hero .photo{position:absolute;right:6vw;bottom:0;height:78vh;max-height:760px;aspect-ratio:3/4;background:linear-gradient(160deg,var(--sand),var(--clay));border-radius:46% 46% 0 0}
+.photo img,.about-photo img{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:inherit;display:block}
+.hero-text{position:relative;z-index:2}
+.hi{font-weight:600;font-size:clamp(15px,2vw,20px);letter-spacing:.12em;color:var(--plum)}
+.n1,.n2{display:block;font-size:clamp(78px,17vw,250px)}
+.n1{-webkit-text-stroke:2px var(--plum);color:transparent}
+.n2{color:var(--plum);margin-top:.03em;animation:rise 1s .15s cubic-bezier(.2,.8,.2,1) both}
+.n1{animation:rise 1s cubic-bezier(.2,.8,.2,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+.roles{max-width:520px;margin:22px 0 28px;font-size:clamp(17px,2vw,22px);color:var(--plum)}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.stats{display:flex;gap:34px;margin-top:34px;color:var(--plum)}
+.stats b{font:400 44px/1 'Bebas Neue'}.stats span{display:block;font-size:14px}
+/* sections */
+section{padding:clamp(70px,10vw,130px) 5vw;position:relative}
+h2{font-size:clamp(52px,9vw,120px);color:var(--plum);margin-bottom:22px}
+h2 .out{-webkit-text-stroke:1.5px var(--plum);color:transparent}
+.lead{max-width:60ch;font-size:19px}
+.about{display:grid;grid-template-columns:1.1fr .9fr;gap:6vw;align-items:center}
+.about-photo{aspect-ratio:4/5;background:linear-gradient(200deg,var(--clay),var(--sand));border-radius:200px 200px 24px 24px}
+.pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.pills span{border:1.5px solid var(--plum);color:var(--plum);padding:6px 16px;border-radius:99px;font-size:15px}
+.mission{background:var(--plum);color:var(--cream);text-align:center;overflow:hidden}
+.mission p.s{font-weight:500;letter-spacing:.1em;color:var(--clay);margin-bottom:18px}
+.mission q{display:block;max-width:20em;margin:auto;font:500 clamp(30px,5vw,62px)/1.12 Poppins;quotes:none}
+.mission .arc{border:1.5px solid var(--clay);width:60vmin;height:60vmin;left:-20vmin;bottom:-30vmin}
+/* campaigns */
+.camps{display:grid;gap:22px;margin-top:40px}
+.camp{display:grid;grid-template-columns:150px 1fr auto;gap:28px;align-items:center;padding:22px 26px;background:var(--sand);border-radius:28px;text-align:left;border:0;width:100%;cursor:pointer;color:var(--ink);font:inherit;transition:background .25s,transform .25s}
+.camp:hover{background:var(--clay);transform:translateX(8px)}
+.camp .th{aspect-ratio:1;border-radius:22px;background:var(--plum2);overflow:hidden;display:grid;place-items:center;color:var(--cream)}
+.camp .th img{width:100%;height:100%;object-fit:cover}
+.camp h3{font-size:clamp(34px,4vw,52px);color:var(--plum)}
+.camp p{font-size:15px;max-width:58ch;margin-top:8px}
+.camp .go{font-weight:600;color:var(--plum);white-space:nowrap}
+/* reels */
+.reels{background:var(--sand)}
+.rgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:22px;margin-top:40px}
+.reel{position:relative;aspect-ratio:9/14;border-radius:24px;overflow:hidden;border:0;cursor:pointer;background:var(--plum2);color:var(--cream);text-align:left;padding:0;font:inherit}
+.reel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.reel:hover img{transform:scale(1.06)}
+.reel::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 45%,rgba(43,12,22,.9))}
+.play{position:absolute;z-index:2;top:50%;left:50%;width:68px;height:68px;margin:-34px;border-radius:50%;background:var(--cream);display:grid;place-items:center;transition:transform .25s}
+.play::before{content:"";border-left:20px solid var(--plum);border-block:12px solid transparent;margin-left:6px}
+.reel:hover .play{transform:scale(1.15)}
+.cap{position:absolute;z-index:2;left:18px;right:18px;bottom:16px}
+.cap b{display:block;font:400 30px/1 'Bebas Neue'}.cap span{font-size:14px;opacity:.9}
+/* posts */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px;margin-top:40px}
+.post{display:flex;flex-direction:column;justify-content:flex-end;min-height:300px;padding:24px;border-radius:26px;background:var(--plum);color:var(--cream);text-decoration:none;position:relative;overflow:hidden;transition:transform .25s}
+.post:hover{transform:translateY(-6px)}
+.post:nth-child(even){background:var(--plum2)}
+.post img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+.post b,.post span{position:relative}
+.post b{font:600 20px/1.3 Poppins}.post span{margin-top:12px;color:var(--clay);font-size:14px}
+/* tools */
+.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:40px}
+.tool{background:var(--plum);color:var(--cream);padding:28px;border-radius:28px}
+.tool h3{font-size:30px;color:var(--clay);margin-bottom:12px}
+.tool li{list-style:none;padding:6px 0;border-bottom:1px solid rgba(250,244,239,.18)}
+/* contact */
+.contact{background:var(--plum);color:var(--cream);overflow:hidden}
+.contact h2{color:var(--cream)}.contact h2 .out{-webkit-text-stroke-color:var(--cream)}
+.contact .btn{background:var(--cream);color:var(--plum);border-color:var(--cream)}
+.contact .btn:hover{background:transparent;color:var(--cream)}
+.contact .btn.o{background:transparent;color:var(--cream)}.contact .btn.o:hover{background:var(--cream);color:var(--plum)}
+.contact .arc{border:1.5px solid var(--clay);width:70vmin;height:70vmin;right:-25vmin;top:-25vmin}
+footer{padding:26px 5vw;background:var(--ink);color:var(--clay);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+/* modal */
+dialog{border:0;border-radius:28px;padding:0;max-width:min(920px,94vw);width:100%;background:var(--cream);color:var(--ink);margin:auto}
+dialog::backdrop{background:rgba(43,12,22,.82)}
+dialog[open]{animation:pop .3s ease}
+@keyframes pop{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:none}}
+.x{position:absolute;top:14px;right:14px;z-index:3;width:44px;height:44px;border-radius:50%;border:0;background:var(--cream);color:var(--plum);font-size:22px;cursor:pointer}
+.m-body{padding:clamp(26px,5vw,52px)}
+.m-body h3{font-size:clamp(42px,7vw,76px);color:var(--plum);margin-bottom:14px}
+.m-body p{margin-bottom:14px;max-width:62ch}
+.pts{margin:6px 0 18px 20px;max-width:62ch}.pts li{margin-bottom:8px}.rl{display:flex;flex-wrap:wrap;gap:8px}.btn.sm{padding:6px 16px;font-size:14px}
+.m-media{background:#000;display:grid;place-items:center}
+.m-media video,.m-media iframe{width:100%;max-height:82vh;aspect-ratio:16/9;border:0;background:#000}
+.m-media.v video{aspect-ratio:auto;max-width:460px}
+@media(max-width:820px){
+ nav a:not(.btn){display:none}
+ .about{grid-template-columns:1fr}
+ .hero .photo{height:46vh;right:50%;transform:translateX(50%);opacity:.35}
+ .camp{grid-template-columns:90px 1fr}.camp .go{display:none}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <a class="logo bb" href="#top" aria-label="Toluwalase Iyekolo, home">Toluwalase</a>
+  <nav>
+    <a href="#about">About</a><a href="#work">Campaigns</a><a href="#reels">Videos</a><a href="#posts">Viral posts</a><a href="#tools">Tools</a>
+    <a class="btn" href="#contact" style="padding:7px 20px;color:var(--cream)">Work with me</a>
+  </nav>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div class="arc a1"></div><div class="arc a2"></div><div class="arc a3"></div>
+  <div class="photo"><img src="images/tolu-hero.png" alt="Toluwalase Iyekolo smiling" onerror="this.remove()"></div>
+  <div class="hero-text">
+    <p class="hi">Hi, my name is</p>
+    <h1 class="bb"><span class="n1">Iyekolo</span><span class="n2">Toluwalase</span></h1>
+    <p class="roles">Brand storytelling, communications, social media management, marketing and video editing.</p>
+    <div class="cta"><a class="btn" href="#work">See my work</a><a class="btn o" href="#contact">Start a project</a></div>
+    <div class="stats"><div><b>4</b><span>brands and campaigns<br>featured below</span></div><div><b>20</b><span>states reached with<br>Girls Beyond Limit 2.0</span></div></div>
+  </div>
+</div>
+
+<section id="about" class="about">
+  <div>
+    <h2 class="bb">About <span class="out">me</span></h2>
+    <p class="lead">I'm a creative based in Lagos, Nigeria, passionate about storytelling and bringing ideas to life. I work across creative ideation, content development, visual storytelling and video production, crafting narratives that connect brands with people and communicate their messages with intention.</p>
+    <div class="pills"><span>Creative ideation</span><span>Content development</span><span>Visual storytelling</span><span>Video production</span><span>Social media management</span></div>
+  </div>
+  <div class="about-photo"><img src="images/tolu-about.png" alt="Portrait of Toluwalase Iyekolo" onerror="this.remove()"></div>
+</section>
+
+<section class="mission">
+  <div class="arc"></div>
+  <p class="s">My mission is to help you</p>
+  <q>Bring ideas to life through creativity and storytelling, helping brands communicate their vision and build meaningful connections with their audience.</q>
+</section>
+
+<section id="work">
+  <h2 class="bb">Campaigns <span class="out">I've worked on</span></h2>
+  <p class="lead">Select a project to read what I did and the role I played.</p>
+  <div class="camps" id="camps"></div>
+</section>
+
+<section id="reels" class="reels">
+  <h2 class="bb">Video <span class="out">content</span></h2>
+  <p class="lead">Event coverage, creative content and interviews for different brands. Select a video to watch it here.</p>
+  <div class="rgrid" id="reels-grid"></div>
+</section>
+
+<section id="posts">
+  <h2 class="bb">Viral posts <span class="out">for NBG Africa</span></h2>
+  <p class="lead">As part of the digital media team at Ragital, I contributed to content creation and event coverage for NBG Africa, producing social-first content designed to connect with audiences and drive online engagement. Select a post to open it on Instagram.</p>
+  <div class="pgrid" id="posts-grid"></div>
+</section>
+
+<section id="tools">
+  <h2 class="bb">Tools <span class="out">I work with</span></h2>
+  <p class="lead">The tools I use to craft your story and share it with your target audience.</p>
+  <div class="tools">
+    <div class="tool"><h3 class="bb">Content creation</h3><ul><li>CapCut</li><li>Canva</li></ul></div>
+    <div class="tool"><h3 class="bb">Social media and content management</h3><ul><li>TikTok</li><li>X</li><li>Instagram</li><li>LinkedIn</li></ul></div>
+    <div class="tool"><h3 class="bb">Content planning</h3><ul><li>Google Docs</li><li>Notion</li><li>Google Sheets</li></ul></div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="arc"></div>
+  <h2 class="bb">Have a story <span class="out">to tell?</span></h2>
+  <p class="lead">Tell me about your brand, your campaign or your next event. I'll get back to you.</p>
+  <div class="cta" style="margin-top:30px">
+    <a class="btn" href="mailto:iyekolotoluwalase@gmail.com?subject=Project%20enquiry">Email me</a>
+    <a class="btn o" href="https://wa.me/2349165615518" target="_blank" rel="noopener">WhatsApp 0916 561 5518</a>
+    <a class="btn o" href="https://www.linkedin.com/in/" target="_blank" rel="noopener" id="li">LinkedIn</a>
+  </div>
+</section>
+</main>
+
+<footer><span>© 2026 Toluwalase Iyekolo. Lagos, Nigeria.</span><a href="#top">Back to top</a></footer>
+
+<dialog id="dlg" aria-label="Details"><button class="x" aria-label="Close" id="close">✕</button><div id="dlg-in"></div></dialog>
+
+<script>
+/* ===== EDIT YOUR CONTENT HERE =====
+   Images: put files in an /images folder and change the names below.
+   Videos: put an .mp4 in /videos and set src:"videos/name.mp4",
+   or use a YouTube video ID with yt:"VIDEO_ID". */
+const CAMPAIGNS=[
+ {t:"Girls Beyond Limit 2.0",img:"images/gbl.jpg",tag:"SheCanDo: Dream. Solve. Lead.",d:"The campaign aimed to reach girls across 20 states in Nigeria. My role involved coordinating state-level volunteer recruitment, exploring creative approaches to securing sponsorships, and overseeing the social media team to support campaign awareness and communication.",pts:["A future vision and problem-solving workshop for girls, running 21 to 25 October","The goal was to reach 10,000 girls across 20 states, up from over 6,000 the year before","The media strategy covered graphics, video and social media: the program announcement, calls for volunteers and sponsors, a recap of last year, and daily countdowns"],link:"presentations/gbl-media-strategy.pdf"},
+ {t:"GOtv Jam Festival",img:"images/jam.jpg",tag:"GOtv Boxing Night, 26 December",d:"A boxing and entertainment festival campaign. I collaborated with the digital media team to develop creative marketing ideas, create promotional content, and explore influencer collaborations to increase awareness and encourage ticket purchases online.",pts:["A three-month roadmap from October to December, building to the event on 26 December","October set the stage with throwbacks and teasers, November built hype with influencers, skits and early bird tickets, and December pushed countdowns and final ticket sales","The event day plan covered a live digital takeover, influencer coverage and third-party media partners"]},
+ {t:"BBN Prize Presentation",img:"images/bbn.jpg",tag:"Event coverage for NBG Africa",d:"An event coverage project documenting the Big Brother prize presentation for NBG Africa's digital platforms. I worked with the team on event coverage and content production, capturing key moments and helping develop engaging content to communicate the event experience to the brand's online audience.",pts:["Covered housemate and guest arrivals, a quick-fire trivia segment, and the prize handover","Edited short videos and published them in real time to keep the online audience updated","Watch the content that was posted below"],reels:["DPgUqX1iDwQ","DPgVEQkCFUQ","DPgXUXqCLxG","DPgXdz2iPQ1","DPgYtwPiBE_","DPgaXOLCKm_","DPgev0vCG9Z","DPgkdy6CERB","DPgoWe1iG2R","DPg6W5GiHx8","DPhFcFOCFUJ","DPhOKKwiLZS","DPhSguViKVM","DPifvE0CGte"],link:"presentations/bbn-live-prize-presentation.pdf"}
+];
+const VIDEOS=[
+ {t:"TNT Files",s:"Video coverage",img:"images/tnt.jpg",ig:"DeZeYfFMjew"},
+ {t:"Multichoice x Kuramo College",s:"Video content",img:"images/multichoice.jpg",ig:"DQZ21B8iGqg"},
+ {t:"Cakes by Yosola",s:"Video coverage",img:"images/yosola.jpg",ig:"Debpv1ABtU2"},
+ {t:"NBG Africa x BBN",s:"Video coverage",img:"images/nbg-interview.jpg",ig:"DPhFcFOCFUJ"}
+];
+const POSTS=[
+ {t:"Iyabo Ojo and Priscilla have always been the iconic mother-daughter duo",img:"images/post1.jpg",url:"https://www.instagram.com/p/DQ338VQCPGA/"},
+ {t:"Who do you think slayed the “Beez in the Trap” trend?",img:"images/post2.jpg",url:"https://www.instagram.com/p/DQrrJHLiFaR/"},
+ {t:"Unforgettable Big Brother friendships that defined the show",img:"images/post3.jpg",url:"https://www.instagram.com/p/DPvy5vekW5Q/"},
+ {t:"Iconic siblings that keep serving family goals",img:"images/post4.jpg",url:"https://www.instagram.com/p/DQJDnNLiN0q/"}
+];
+/* =================================== */
+const $=s=>document.querySelector(s),dlg=$('#dlg'),box=$('#dlg-in');
+const img=(src,alt="")=>`<img src="${src}" alt="${alt}" loading="lazy" onerror="this.remove()">`;
+$('#camps').innerHTML=CAMPAIGNS.map((c,i)=>`<button class="camp" data-i="${i}"><div class="th">${img(c.img,c.t)}</div><div><h3 class="bb">${c.t}</h3><p>${c.tag}</p></div><span class="go">Read more</span></button>`).join('');
+$('#reels-grid').innerHTML=VIDEOS.map((v,i)=>`<button class="reel" data-v="${i}" aria-label="Play ${v.t}">${img(v.img,"")}<span class="play"></span><span class="cap"><b>${v.t}</b><span>${v.s}</span></span></button>`).join('');
+$('#posts-grid').innerHTML=POSTS.map(p=>`<a class="post" href="${p.url}" target="_blank" rel="noopener">${img(p.img,"")}<b>${p.t}</b><span>View on Instagram</span></a>`).join('');
+function open(h){box.innerHTML=h;dlg.showModal()}
+function shut(){box.innerHTML="";dlg.close()}
+document.addEventListener('click',e=>{
+ const g=e.target.closest('[data-ig]');if(g){const id=g.dataset.ig;open(`<div class="m-media v" style="background:var(--cream)"><iframe src="https://www.instagram.com/reel/${id}/embed" style="width:100%;max-width:420px;height:min(78vh,720px);aspect-ratio:auto;background:#fff" allow="autoplay;fullscreen" allowfullscreen title="Reel"></iframe></div><div class="m-body" style="padding:18px 30px"><a class="btn o" href="https://www.instagram.com/reel/${id}/" target="_blank" rel="noopener">Watch on Instagram</a></div>`);return}
+ const c=e.target.closest('.camp'),v=e.target.closest('.reel');
+ if(c){const p=CAMPAIGNS[c.dataset.i];open(`<div class="m-body"><h3 class="bb">${p.t}</h3><p><strong>${p.tag}</strong></p><p>${p.d}</p><ul class="pts">${p.pts.map(x=>`<li>${x}</li>`).join("")}</ul>${p.reels?`<div class="rl">${p.reels.map((r,k)=>`<button class="btn o sm" data-ig="${r}">Reel ${k+1}</button>`).join("")}</div>`:""}<div class="cta" style="margin-top:20px">${p.link?`<a class="btn" href="${p.link}" target="_blank" rel="noopener">View the full presentation</a>`:""}<a class="btn o" href="#contact" onclick="shut()">Talk to me about a similar project</a></div></div>`)}
+ if(v){const p=VIDEOS[v.dataset.v];if(p.ig){open(`<div class="m-media v" style="background:var(--cream)"><iframe src="https://www.instagram.com/reel/${p.ig}/embed" style="width:100%;max-width:420px;height:min(78vh,720px);aspect-ratio:auto;background:#fff" allow="autoplay;fullscreen" allowfullscreen title="${p.t}"></iframe></div><div class="m-body" style="padding:18px 30px"><h3 class="bb" style="font-size:40px;margin:0">${p.t}</h3><p style="margin:0 0 10px">${p.s}</p><a class="btn o" href="https://www.instagram.com/reel/${p.ig}/" target="_blank" rel="noopener">Watch on Instagram</a></div>`);return}
+ open(`<div class="m-media">${p.yt?`<iframe src="https://www.youtube-nocookie.com/embed/${p.yt}?autoplay=1" allow="autoplay;fullscreen" allowfullscreen title="${p.t}"></iframe>`:`<video src="${p.src}" controls autoplay playsinline></video>`}</div><div class="m-body" style="padding:22px 30px"><h3 class="bb" style="font-size:44px;margin:0">${p.t}</h3><p style="margin:0">${p.s}</p></div>`)}
+});
+$('#close').onclick=shut;
+dlg.addEventListener('click',e=>{if(e.target===dlg)shut()});
+dlg.addEventListener('close',()=>{box.innerHTML=""});
+</script>
+</body>
+</html>
