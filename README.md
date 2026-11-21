@@ -2,7 +2,7 @@
 
 The personal portfolio website of **Toluwalase Iyekolo**, a Lagos-based creative working in brand storytelling, communications, marketing and video editing.
 
-**Live site:** _add your Vercel link here_
+**Live site:** (https://tolu-portofolio.vercel.app/)
 
 **Contact:** [iyekolotoluwalase@gmail.com](mailto:iyekolotoluwalase@gmail.com) · [LinkedIn](https://www.linkedin.com/in/toluwalase-iyekolo)
 
