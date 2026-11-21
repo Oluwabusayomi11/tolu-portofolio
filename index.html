@@ -16,7 +16,7 @@ a{color:inherit}
 :focus-visible{outline:3px solid var(--plum);outline-offset:3px}
 .bb{font-family:'Bebas Neue',Impact,sans-serif;font-weight:400;line-height:.88;letter-spacing:.01em}
 header{position:fixed;inset:0 0 auto;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;background:rgba(250,244,239,.88);backdrop-filter:blur(8px)}
-header .logo{font-size:30px;text-decoration:none;color:var(--plum)}
+header .burger{order:3}header .logo{font-size:30px;text-decoration:none;color:var(--plum)}
 nav{display:flex;gap:18px;font-size:14px;font-weight:500}
 nav a{text-decoration:none}nav a:hover{text-decoration:underline;text-underline-offset:6px}
 .btn{display:inline-block;background:var(--plum);color:var(--cream);padding:13px 28px;border-radius:99px;text-decoration:none;font-weight:500;border:2px solid var(--plum);cursor:pointer;font:500 16px Poppins;transition:background .2s,color .2s}
@@ -86,9 +86,9 @@ h2 .out{-webkit-text-stroke:1.5px var(--plum);color:transparent}
 .post b{font:600 20px/1.3 Poppins}.post span{margin-top:12px;color:var(--clay);font-size:14px}
 /* tools */
 .tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:40px}
-.tool{background:var(--plum);color:var(--cream);padding:28px;border-radius:28px}
+.tool{background:var(--plum);color:var(--cream);padding:24px 18px;border-radius:28px}
 .tool h3{font-size:30px;color:var(--clay);margin-bottom:12px}
-.tool li{list-style:none;display:flex;align-items:center;gap:12px;padding:8px 0;border-bottom:1px solid rgba(250,244,239,.18)}
+.tool ul{display:flex;flex-wrap:wrap;gap:10px;padding:0}.tool li{list-style:none;display:flex;align-items:center;gap:10px;padding:5px 16px 5px 5px;border-radius:99px;background:rgba(250,244,239,.1);font-size:15px}
 /* contact */
 .contact{background:var(--plum);color:var(--cream);overflow:hidden}
 .contact h2{color:var(--cream)}.contact h2 .out{-webkit-text-stroke-color:var(--cream)}
@@ -107,12 +107,24 @@ dialog[open]{animation:pop .3s ease}
 .m-body h3{font-size:clamp(42px,7vw,76px);color:var(--plum);margin-bottom:14px}
 .m-body p{margin-bottom:14px;max-width:62ch}
 .pts{margin:6px 0 18px 20px;max-width:62ch}.pts li{margin-bottom:8px}.rl{display:flex;flex-wrap:wrap;gap:8px}.btn.sm{padding:6px 16px;font-size:14px}
-.ic{width:34px;height:34px;flex:none}.camp.art{grid-template-columns:1fr auto}.post small{position:relative;color:var(--clay);font-size:14px;margin-bottom:6px}
+.ic{width:36px;height:36px;flex:none;border-radius:50%}.camp.art{grid-template-columns:1fr auto}.post small{position:relative;color:var(--clay);font-size:14px;margin-bottom:6px}
+.post.pic{padding:0;min-height:0;aspect-ratio:4/5;background:var(--plum2)}.post.pic img{opacity:1}
+.post.pic span{position:absolute;left:14px;bottom:14px;margin:0;background:var(--cream);color:var(--plum);padding:7px 16px;border-radius:99px;font-weight:600;font-size:14px;z-index:1}
+.burger{display:none;width:44px;height:44px;border:0;background:none;cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:6px}
+.burger span{width:24px;height:2.5px;background:var(--plum);border-radius:2px;transition:transform .25s,opacity .25s}
+.burger[aria-expanded=true] span:nth-child(1){transform:translateY(8.5px) rotate(45deg)}
+.burger[aria-expanded=true] span:nth-child(2){opacity:0}
+.burger[aria-expanded=true] span:nth-child(3){transform:translateY(-8.5px) rotate(-45deg)}
+.m-body h4{font:600 22px/1.3 Poppins;color:var(--plum);margin:28px 0 10px}
 .m-media{background:#000;display:grid;place-items:center}
 .m-media video,.m-media iframe{width:100%;max-height:82vh;aspect-ratio:16/9;border:0;background:#000}
 .m-media.v video{aspect-ratio:auto;max-width:460px}
 @media(max-width:820px){
- nav a:not(.btn){display:none}
+ .burger{display:flex}
+ nav{position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;padding:8px 5vw 22px;background:var(--cream);border-bottom:1px solid var(--sand);max-height:calc(100svh - 64px);overflow:auto;transform:translateY(-12px);opacity:0;visibility:hidden;transition:transform .25s,opacity .25s,visibility 0s .25s}
+ nav.open{transform:none;opacity:1;visibility:visible;transition:transform .25s,opacity .25s}
+ nav a{padding:13px 0;font-size:18px}
+ nav a.btn{text-align:center;margin-top:12px;padding:12px 20px!important;font-size:16px}
  .about{grid-template-columns:1fr}
  .hero .photo{height:46vh;right:50%;transform:translateX(50%);opacity:.35}
  .camp{grid-template-columns:90px 1fr}.camp.art{grid-template-columns:1fr}.camp .go{display:none}
@@ -124,7 +136,8 @@ dialog[open]{animation:pop .3s ease}
 
 <header>
   <a class="logo bb" href="#top" aria-label="Toluwalase Iyekolo, home">Toluwalase</a>
-  <nav>
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+  <nav id="nav">
     <a href="#about">About</a><a href="#work">Projects</a><a href="#reels">Videos</a><a href="#posts">Viral posts</a><a href="#personal">Personal brands</a><a href="#editorial">Editorial</a><a href="#tools">Tools</a>
     <a class="btn" href="#contact" style="padding:7px 20px;color:var(--cream)">Work with me</a>
   </nav>
@@ -176,14 +189,14 @@ dialog[open]{animation:pop .3s ease}
 </section>
 
 <section id="personal">
-  <h2 class="bb">Personal brand <span class="out">content</span></h2>
-  <p class="lead">Content creation and creative execution for the Instagram pages of people building their own personal brands.</p>
+  <h2 class="bb">Personal brand <span class="out">content posts</span></h2>
+  <p class="lead">Content creation and creative execution for the Instagram pages of people building their own personal brands.<br>Select a post to open it on Instagram.</p>
   <div class="pgrid" id="personal-grid"></div>
 </section>
 
 <section id="editorial" class="reels">
   <h2 class="bb">Editorial and <span class="out">blog writing</span></h2>
-  <p class="lead">Written editorial samples I developed for NBG Africa's proposed blog.<br>Select a piece to read it.</p>
+  <p class="lead">Written editorial samples I wrote.<br>Select a piece to read it.</p>
   <div class="camps" id="art-grid"></div>
 </section>
 
@@ -191,9 +204,9 @@ dialog[open]{animation:pop .3s ease}
   <h2 class="bb">Tools <span class="out">I work with</span></h2>
   <p class="lead">The tools I use to craft your story and share it with your target audience.</p>
   <div class="tools">
-    <div class="tool"><h3 class="bb">Content creation</h3><ul><li><svg class="ic" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#fff"/><path d="M10 14l20 12M10 26l20-12" stroke="#000" stroke-width="3.5" stroke-linecap="round"/></svg>CapCut</li><li><svg class="ic" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#6D3FF2"/><text x="20" y="26" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-weight="700" font-size="17" fill="#fff">Ca</text></svg>Canva</li></ul></div>
-    <div class="tool"><h3 class="bb">Publishing platforms</h3><ul><li><svg class="ic" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#000"/><path d="M21 10v14a4.5 4.5 0 1 1-4.5-4.5M21 10c.5 3.5 3 5.5 6.5 5.7" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round"/></svg>TikTok</li><li><svg class="ic" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#000"/><path d="M12 11l16 18M28 11L12 29" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg>X</li><li><svg class="ic" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="igg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#FEDA75"/><stop offset=".4" stop-color="#FA7E1E"/><stop offset=".65" stop-color="#D62976"/><stop offset="1" stop-color="#4F5BD5"/></linearGradient></defs><rect width="40" height="40" rx="11" fill="url(#igg)"/><rect x="9" y="9" width="22" height="22" rx="7" fill="none" stroke="#fff" stroke-width="2.6"/><circle cx="20" cy="20" r="5.2" fill="none" stroke="#fff" stroke-width="2.6"/><circle cx="27" cy="13" r="1.6" fill="#fff"/></svg>Instagram</li><li><svg class="ic" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="8" fill="#0A66C2"/><text x="20" y="28" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="20" fill="#fff">in</text></svg>LinkedIn</li></ul></div>
-    <div class="tool"><h3 class="bb">Content planning</h3><ul><li><svg class="ic" viewBox="0 0 40 40" aria-hidden="true"><path d="M9 3h16l8 8v26H9z" fill="#4285F4"/><path d="M25 3l8 8h-8z" fill="#A1C2FA"/><path d="M14 20h14M14 25h14M14 30h9" stroke="#fff" stroke-width="2.2"/></svg>Google Docs</li><li><svg class="ic" viewBox="0 0 40 40" aria-hidden="true"><rect x="3" y="3" width="34" height="34" rx="6" fill="#fff" stroke="#000" stroke-width="2.5"/><text x="20" y="29" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="22" fill="#000">N</text></svg>Notion</li><li><svg class="ic" viewBox="0 0 40 40" aria-hidden="true"><path d="M9 3h16l8 8v26H9z" fill="#0F9D58"/><path d="M25 3l8 8h-8z" fill="#87CEAC"/><rect x="14" y="19" width="14" height="12" fill="none" stroke="#fff" stroke-width="2"/><path d="M14 25h14M21 19v12" stroke="#fff" stroke-width="2"/></svg>Google Sheets</li></ul></div>
+    <div class="tool"><h3 class="bb">Content creation</h3><ul><li><img class="ic" src="images/logos/capcut.png" alt="" width="36" height="36">CapCut</li><li><img class="ic" src="images/logos/canva.png" alt="" width="36" height="36">Canva</li></ul></div>
+    <div class="tool"><h3 class="bb">Publishing platforms</h3><ul><li><img class="ic" src="images/logos/tiktok.png" alt="" width="36" height="36">TikTok</li><li><img class="ic" src="images/logos/x.png" alt="" width="36" height="36">X</li><li><img class="ic" src="images/logos/instagram.png" alt="" width="36" height="36">Instagram</li><li><img class="ic" src="images/logos/linkedin.png" alt="" width="36" height="36">LinkedIn</li></ul></div>
+    <div class="tool"><h3 class="bb">Content planning</h3><ul><li><img class="ic" src="images/logos/google-docs.png" alt="" width="36" height="36">Google Docs</li><li><img class="ic" src="images/logos/notion.png" alt="" width="36" height="36">Notion</li><li><img class="ic" src="images/logos/google-sheets.png" alt="" width="36" height="36">Google Sheets</li></ul></div>
   </div>
 </section>
 
@@ -203,7 +216,7 @@ dialog[open]{animation:pop .3s ease}
   <p class="lead">Tell me about your brand, your campaign or your next event. I'll get back to you.</p>
   <div class="cta" style="margin-top:30px">
     <a class="btn" href="mailto:iyekolotoluwalase@gmail.com?subject=Project%20enquiry">Email me</a>
-    <a class="btn o" href="https://wa.me/2349088977207" target="_blank" rel="noopener">WhatsApp 0908 897 7207</a>
+    <a class="btn o" href="https://wa.me/2349088977207" target="_blank" rel="noopener">WhatsApp</a>
     <a class="btn o" href="https://www.linkedin.com/in/toluwalase-iyekolo" target="_blank" rel="noopener" id="li">LinkedIn</a>
   </div>
 </section>
@@ -221,13 +234,13 @@ dialog[open]{animation:pop .3s ease}
 const CAMPAIGNS=[
  {t:"Girls Beyond Limit 2.0",img:"images/gbl.jpg",tag:"SheCanDo: Dream. Solve. Lead.",d:"The campaign aimed to reach girls across 20 states in Nigeria. My role involved coordinating state-level volunteer recruitment, exploring creative approaches to securing sponsorships, and overseeing the social media team to support campaign awareness and communication.",link:"presentations/gbl-media-strategy.pdf"},
  {t:"GOtv Jam Festival",img:"images/jam.jpg",tag:"Boxing and entertainment festival",d:"A boxing and entertainment festival campaign. I collaborated with the digital media team to develop creative marketing ideas, create promotional content, and explore influencer collaborations to increase awareness and encourage ticket purchases online.",link:"presentations/gotv-campaign-roadmap.pdf"},
- {t:"BBN Prize Presentation",img:"images/bbn.jpg",tag:"Event coverage for NBG Africa",d:"An event coverage project documenting the Big Brother prize presentation for NBG Africa's digital platforms. I worked with the team on event coverage and content production, capturing key moments and helping develop engaging content to communicate the event experience to the brand's online audience.",reels:["DPgUqX1iDwQ","DPgVEQkCFUQ","DPgXUXqCLxG","DPgXdz2iPQ1","DPgYtwPiBE_","DPgaXOLCKm_","DPgev0vCG9Z","DPgkdy6CERB","DPgoWe1iG2R","DPg6W5GiHx8","DPhFcFOCFUJ","DPhOKKwiLZS","DPhSguViKVM","DPifvE0CGte"],link:"presentations/bbn-live-prize-presentation.pdf"}
+ {t:"BBN Prize Presentation",img:"images/bbn.jpg",tag:"Event coverage for NBG Africa",d:"An event coverage project documenting the Big Brother prize presentation for NBG Africa's digital platforms. I worked with the team on event coverage and content production, capturing key moments and helping develop engaging content to communicate the event experience to the brand's online audience.",reels:["DPgUqX1iDwQ","DPgVEQkCFUQ","DPgXUXqCLxG","DPgXdz2iPQ1","DPgYtwPiBE_"],link:"presentations/bbn-live-prize-presentation.pdf"}
 ];
 /* Videos: ig = Instagram reel code. src = an .mp4 in the /videos folder (plays on the site; falls back to Instagram if the file is missing). */
 const VIDEOS=[
  {t:"TNT Files",s:"Video coverage",img:"images/tnt.jpg",ig:"DeZeYfFMjew"},
- {t:"Multichoice x Kuramo College",s:"Video content",img:"images/multichoice.jpg",ig:"DQZ21B8iGqg",src:"videos/multichoice-kuramo.mp4"},
- {t:"Cakes by Yosola",s:"Video coverage",img:"images/yosola.jpg",ig:"Debpv1ABtU2",src:"videos/cakes-by-yosola.mp4"},
+ {t:"Multichoice x Kuramo College",s:"Video content",img:"images/multichoice.jpg",ig:"DQZ21B8iGqg"},
+ {t:"Cakes by Yosola",s:"Video coverage",img:"images/yosola.jpg",ig:"Debpv1ABtU2"},
  {t:"NBG Africa x BBN",s:"Video coverage",img:"images/nbg-interview.jpg",ig:"DPhFcFOCFUJ"}
 ];
 const POSTS=[
@@ -236,26 +249,95 @@ const POSTS=[
  {t:"Unforgettable Big Brother friendships that defined the show",img:"images/post3.jpg",url:"https://www.instagram.com/p/DPvy5vekW5Q/"},
  {t:"Iconic siblings that keep serving family goals",img:"images/post4.jpg",url:"https://www.instagram.com/p/DQJDnNLiN0q/"}
 ];
-/* Personal brands: replace the sample entries with the real people and their Instagram pages. */
+/* Personal brand posts: img = cover image in /images, url = the Instagram link. */
 const PERSONAL=[
- {n:"Name of person 1",h:"@instagram_handle",d:"Content creation and creative execution for their Instagram page.",img:"images/person1.jpg",url:"https://www.instagram.com/"},
- {n:"Name of person 2",h:"@instagram_handle",d:"Content creation and creative execution for their Instagram page.",img:"images/person2.jpg",url:"https://www.instagram.com/"},
- {n:"Name of person 3",h:"@instagram_handle",d:"Content creation and creative execution for their Instagram page.",img:"images/person3.jpg",url:"https://www.instagram.com/"}
+ {img:"images/personal1.jpg",url:"https://www.instagram.com/reel/DFNY4tVpJPC/"},
+ {img:"images/personal2.jpg",url:"https://www.instagram.com/reel/DfZyiwIA8oj/"},
+ {img:"images/personal3.jpg",url:"https://www.instagram.com/p/Dfsr5CXAMZw/"},
+ {img:"images/personal4.jpg",url:"https://www.instagram.com/reel/DeZIYuJMI9b/"}
 ];
 /* Editorial: replace the sample entries with your real articles. body = paragraphs. link = optional Google Doc link. */
 const EDITORIAL=[
- {t:"Article title 1",tag:"Written for NBG Africa's proposed blog",body:["Paste the article here, one paragraph per entry."],link:""},
- {t:"Article title 2",tag:"Written for NBG Africa's proposed blog",body:["Paste the article here, one paragraph per entry."],link:""},
- {t:"Article title 3",tag:"Written for NBG Africa's proposed blog",body:["Paste the article here, one paragraph per entry."],link:""}
+ {
+  "t": "Celebrity Feuds That Broke the Internet",
+  "tag": "",
+  "body": [
+   "Nothing is more entertaining than the chaos one celebrity can unleash on another. It’s seeing a side of their menace you never get to witness normally. It makes them look more relatable, and honestly, we are here for it. We love a good drama.",
+   "It’s not exciting when celebrities are friends. If they’re cordial with each other, everything is fine, but if they are rivals, all hell breaks loose: sub tweets, diss tracks, bold callouts, tense encounters, you name it—it’s all going to go down.",
+   "In NBG’s quest to give you all the tea, we have made a breakdown of some of the biggest celebrity feuds that had the internet in a frenzy.",
+   "## 1. Donald Trump vs. Elon Musk",
+   "The world’s richest man and the world’s most powerful man in a feud on social media? Shocked? Yes. Disappointing? No. After what seemed like a strong bromance, things went downhill just six months after the 2024 election over a spending bill championed by Trump, which Musk felt would greatly increase the federal deficit. The beef was initiated by Elon Musk, who repeatedly threatened to create a new political party if the agenda bill passes.",
+   "Other prominent figures from the president’s and the tech leader’s respective orbits also joined in, some taking sides and others calling for the feud to end. Just about a week after it began, Musk apologized for his very public criticism of Trump, but for about that period of time, it was a sight to behold.",
+   "## 2. Nicki Minaj vs. Cardi B",
+   "Everyone knows Nicki Minaj is the number one mean girl of the century, picking a major fight with everyone. But the one that caught our eye the most is her long-term rivalry with Cardi B.",
+   "In 2018, sparks flew between two of the biggest female rappers, and this was just not based on diss tracks; they had solely made it their goal to avoid each other. They couldn’t even be caught in the same room for their motorsport feature with the Migos.",
+   "Fast forward to 2025, when everything finally exploded on Twitter. Not only were they going bar-for-bar at each other, but their children also got dragged into the mess. At that point, nobody was holding back.",
+   "The two biggest rap queens made sure to be very creative with their use of words; after all, they are rappers indeed.",
+   "## 3. Kendrick Lamar vs. Drake",
+   "Speaking of rappers, another feud that completely shook the industry was Kendrick Lamar vs. Drake.",
+   "From “Like That” to “Not Like Us” to the Pop Out and unprecedented lawsuits, the whole situation had us gagged! With a single guest verse on Future and Metro Boomin’s “Like That,” Kendrick launched a public and deeply personal war against Drake. And yes, Drake responded, but many would argue that was his biggest mistake.",
+   "His response led to many more tracks from Kendrick. Kendrick didn’t just win musically; he went on to collect Grammy Awards and then publicly dissed Drake AGAIN at the Super Bowl halftime show.",
+   "To crown it all, Drake lost his lawsuit with Universal Music Group.",
+   "## 4. Will Smith vs. Chris Rock",
+   "If one slap has ever echoed across the globe, it would be the one Will Smith delivered to Chris Rock.",
+   "During the 94th Academy Awards, Smith casually walked onstage and slapped Rock across the face after he made an unscripted joke about Jada Pinkett Smith’s shaved head, a result of alopecia.",
+   "But this feud didn’t start that night. According to Smith supporters, Chris Rock had been throwing shade at Jada as far back as 2016 during his hosting gig at the Oscars, where he mocked her boycott of the event.",
+   "So when did the slap finally happen? The internet collectively froze.",
+   "## Why Do We Love the Drama?",
+   "Maybe it’s the chaos. Maybe it’s entertainment.",
+   "Celebrity feuds remind us that fame doesn’t erase ego, insecurity, pride, or emotion. It only magnifies it publicly.",
+   "And while we act shocked, the fact never changes that the internet will forever be prepared for a celebrity beef served hot, messy, and very public."
+  ],
+  "link": ""
+ },
+ {
+  "t": "Is Age Really Just a Number?",
+  "tag": "",
+  "sub": "A 20-year-old woman shares the paradox of falling in love with older men",
+  "body": [
+   "Before you scream, “YES, older men are always better!” or “No, they’re the real devils!”",
+   "Let’s break down what truly comes with loving a man older than you—the paradox of it all.",
+   "Gen Z men are still figuring themselves out, are often emotionally confused, and tend to value vibes rather than commitment. Hence, behind every woman in a mature relationship is literally an \"older man.\"",
+   "Because let’s be honest: Gen Z women believe “men are scum,” so it’s about time we explore Millennials instead. But does that actually constitute a better choice?",
+   "These observations are based on general trends that have been analysed regarding older men, not your specific “Uncle Michael.” Calm down.",
+   "## 1. The Chase is Always the Highlight",
+   "Nobody chases a woman the way an older man will. He is always knowledgeable in the game of chase and yearning. “20 questions?” No. “Come over to my place for a meal while we talk?” Definitely not. But reading your mind and knowing the proper way you want to be approached and treated? A big yes.",
+   "The first goal is always to get you hooked. There could be other motives, but what comes first is how to make you feel seen and not scanned.",
+   "But here’s the flip side: They don’t know when to draw the line in the chase. It’s as if ‘NO’ is a serious bruise to their ego, one they are not willing to take.",
+   "## 2. They are Goal-Oriented",
+   "They don’t dawdle; they know what they are looking for and are not here to waste your time. Period. If they are not feeling it, he isn’t as likely to waste time stringing a woman along just for the heck of it.",
+   "But if they’re into you? They move with intention.",
+   "They’re quick to become exclusive and seal the deal, especially with marriage. This could come across as pressure to the ladies. If you’re not ready, priorities will clash, and it becomes a silent war.",
+   "## 3. Experience is their Middle Name",
+   "Whatever you think you’ve lived through, they’ve experienced it twice, maybe three times.",
+   "Hence, there’s always this sense of authority around them, one that is a bit too hard to shake off. He is able to give you the advice and full support you need—something a man your age can’t offer. But then, it all boils down to whether this undermines respect in the relationship or not.",
+   "Nobody is prouder than a man who knows his worth and level, and best believe they will show it off. It can be sexy, but it can also be aggravating—the kind that leaves you angry but not angry enough to leave him—and toxicity starts. The level of disrespect and gaslighting that could be faced in such a relationship could be the deal-breaker for some women.",
+   "## 4. You Know Exactly What You’re Getting",
+   "If you’re choosing based on aesthetics only, you might miss out on someone whose character outlives his hairline.",
+   "Dating your age mate is like buying a mystery box. Dating an older man? You can see the final draft.",
+   "I mean, those young men who look full of life now... you might as well know what you are getting into with older men whose appearance is already accurate. Their full hair could become a receding hairline, and we can’t be too sure we want that for our kids, right?",
+   "We need to help the “girlies” love what they can look at until the end of time. Then again, looks will fade, but your peace doesn’t.",
+   "## 5. Can Both Worlds Co-exist?",
+   "Dating older means navigating different generations, values, and even friend circles. You could find yourself shrinking to fit his world, instead of both worlds merging equally.",
+   "Both parties tend to forget they have different circles, especially in terms of age. It always boils down to if both can live in each person’s world, something a lot of relationships find hard to pull off. There’s a high chance you’ll start discovering things you never knew about all those so-called “experiences” that shaped who he is today.",
+   "## So, What is Reality?",
+   "It’s truly not about age. A good man is a good man. A manipulator is a manipulator. Age doesn’t change character; it only reveals it faster.",
+   "Older men come with intentionality, experience, and clarity, but they can also come with ego, control, and unhealed habits built long before you arrived. The harsh reality is there are no rules or playbooks to understand a man. It all boils down to how events turn out.",
+   "You can find love in your age group.",
+   "You can find love outside it.",
+   "Age is a factor, but it should never be the guarantee."
+  ],
+  "link": ""
+ }
 ];
 /* =================================== */
 const $=s=>document.querySelector(s),dlg=$('#dlg'),box=$('#dlg-in');
 const img=(src,alt="")=>`<img src="${src}" alt="${alt}" loading="lazy" onerror="this.remove()">`;
 $('#camps').innerHTML=CAMPAIGNS.map((c,i)=>`<button class="camp" data-i="${i}"><div class="th">${img(c.img,c.t)}</div><div><h3 class="bb">${c.t}</h3><p>${c.tag}</p></div><span class="go">Read more</span></button>`).join('');
 $('#reels-grid').innerHTML=VIDEOS.map((v,i)=>`<button class="reel" data-v="${i}" aria-label="Play ${v.t}">${img(v.img,"")}<span class="play"></span><span class="cap"><b>${v.t}</b><span>${v.s}</span></span></button>`).join('');
-$('#posts-grid').innerHTML=POSTS.map(p=>`<a class="post" href="${p.url}" target="_blank" rel="noopener">${img(p.img,"")}<b>${p.t}</b><span>View on Instagram</span></a>`).join('');
-$('#personal-grid').innerHTML=PERSONAL.map(p=>`<a class="post" href="${p.url}" target="_blank" rel="noopener">${img(p.img,"")}<small>${p.h}</small><b>${p.n}</b><span>${p.d}</span></a>`).join('');
-$('#art-grid').innerHTML=EDITORIAL.map((a,i)=>`<button class="camp art" data-a="${i}"><div><h3 class="bb">${a.t}</h3><p>${a.tag}</p></div><span class="go">Read</span></button>`).join('');
+$('#posts-grid').innerHTML=POSTS.map((p,k)=>`<a class="post pic" href="${p.url}" target="_blank" rel="noopener" aria-label="${p.t} (opens Instagram)">${img(p.img,"")}<span>View on Instagram</span></a>`).join('');
+$('#personal-grid').innerHTML=PERSONAL.map((p,k)=>`<a class="post pic" href="${p.url}" target="_blank" rel="noopener" aria-label="Personal brand post ${k+1} (opens Instagram)">${img(p.img,"")}<span>View on Instagram</span></a>`).join('');
+$('#art-grid').innerHTML=EDITORIAL.map((a,i)=>`<button class="camp art" data-a="${i}"><div><h3 class="bb">${a.t}</h3>${(a.sub||a.tag)?`<p>${a.sub||a.tag}</p>`:""}</div><span class="go">Read</span></button>`).join('');
 function open(h){box.innerHTML=h;dlg.showModal()}
 function shut(){box.innerHTML="";dlg.close()}
 const igBox=(id,t,sub)=>`<div class="m-media v" style="background:var(--cream)"><iframe src="https://www.instagram.com/reel/${id}/embed" style="width:100%;max-width:420px;height:min(78vh,720px);aspect-ratio:auto;background:#fff" allow="autoplay;fullscreen" allowfullscreen title="${t||'Reel'}"></iframe></div><div class="m-body" style="padding:18px 30px">${t?`<h3 class="bb" style="font-size:40px;margin:0">${t}</h3><p style="margin:0 0 10px">${sub}</p>`:""}<a class="btn o" href="https://www.instagram.com/reel/${id}/" target="_blank" rel="noopener">Watch on Instagram</a></div>`;
@@ -263,10 +345,15 @@ window.igFall=i=>{const p=VIDEOS[i];box.innerHTML=igBox(p.ig,p.t,p.s)};
 document.addEventListener('click',e=>{
  const g=e.target.closest('[data-ig]');if(g){open(igBox(g.dataset.ig));return}
  const c=e.target.closest('.camp[data-i]'),v=e.target.closest('.reel'),a=e.target.closest('[data-a]');
- if(c){const p=CAMPAIGNS[c.dataset.i];open(`<div class="m-body"><h3 class="bb">${p.t}</h3><p><strong>${p.tag}</strong></p><p>${p.d}</p>${p.reels?`<p><strong>Watch the content that was posted</strong></p><div class="rl">${p.reels.map((r,k)=>`<button class="btn o sm" data-ig="${r}">Reel ${k+1}</button>`).join("")}</div>`:""}${p.link?`<div class="cta" style="margin-top:22px"><a class="btn" href="${p.link}" target="_blank" rel="noopener">View further details</a></div>`:""}</div>`)}
- if(a){const p=EDITORIAL[a.dataset.a];open(`<div class="m-body"><h3 class="bb">${p.t}</h3><p><strong>${p.tag}</strong></p>${p.body.map(x=>`<p>${x}</p>`).join("")}${p.link?`<a class="btn" href="${p.link}" target="_blank" rel="noopener">Read the full piece</a>`:""}</div>`)}
+ if(c){const p=CAMPAIGNS[c.dataset.i];open(`<div class="m-body"><h3 class="bb">${p.t}</h3><p><strong>${p.tag}</strong></p><p>${p.d}</p>${p.reels?`<p><strong>Watch some of the content that was posted</strong></p><div class="rl">${p.reels.map((r,k)=>`<button class="btn o sm" data-ig="${r}">Reel ${k+1}</button>`).join("")}</div>`:""}${p.link?`<div class="cta" style="margin-top:22px"><a class="btn" href="${p.link}" target="_blank" rel="noopener">View further details</a></div>`:""}</div>`)}
+ if(a){const p=EDITORIAL[a.dataset.a];open(`<div class="m-body"><h3 class="bb">${p.t}</h3>${p.tag?`<p><strong>${p.tag}</strong></p>`:""}${p.sub?`<p><em>${p.sub}</em></p>`:""}${p.body.map(x=>x.startsWith('## ')?`<h4>${x.slice(3)}</h4>`:`<p>${x}</p>`).join("")}${p.link?`<a class="btn" href="${p.link}" target="_blank" rel="noopener">Read the full piece</a>`:""}</div>`)}
  if(v){const i=v.dataset.v,p=VIDEOS[i];if(p.src){open(`<div class="m-media"><video src="${p.src}" controls autoplay playsinline onerror="igFall(${i})"></video></div><div class="m-body" style="padding:18px 30px"><h3 class="bb" style="font-size:40px;margin:0">${p.t}</h3><p style="margin:0 0 10px">${p.s}</p><a class="btn o" href="https://www.instagram.com/reel/${p.ig}/" target="_blank" rel="noopener">Watch on Instagram</a></div>`)}else open(igBox(p.ig,p.t,p.s))}
 });
+const bg=$('#burger'),nv=$('#nav');
+const menu=o=>{nv.classList.toggle('open',o);bg.setAttribute('aria-expanded',o);bg.setAttribute('aria-label',o?'Close menu':'Open menu')};
+bg.onclick=()=>menu(!nv.classList.contains('open'));
+nv.addEventListener('click',e=>{if(e.target.closest('a'))menu(false)});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')menu(false)});
 $('#close').onclick=shut;
 dlg.addEventListener('click',e=>{if(e.target===dlg)shut()});
 dlg.addEventListener('close',()=>{box.innerHTML=""});
