@@ -7,7 +7,7 @@ a{color:inherit}
 .bb{font-family:'Bebas Neue',Impact,sans-serif;font-weight:400;line-height:.88;letter-spacing:.01em}
 header{position:fixed;inset:0 0 auto;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;background:rgba(250,244,239,.88);backdrop-filter:blur(8px)}
 header .burger{order:3}header .logo{font-size:30px;text-decoration:none;color:var(--plum)}
-nav{display:flex;gap:18px;font-size:14px;font-weight:500}
+nav{display:flex;align-items:center;gap:18px;font-size:14px;font-weight:500}
 nav a{text-decoration:none}nav a:hover{text-decoration:underline;text-underline-offset:6px}
 .btn{display:inline-block;background:var(--plum);color:var(--cream);padding:13px 28px;border-radius:99px;text-decoration:none;font-weight:500;border:2px solid var(--plum);cursor:pointer;font:500 16px Poppins;transition:background .2s,color .2s}
 .btn:hover{background:transparent;color:var(--plum)}
@@ -111,7 +111,7 @@ dialog[open]{animation:pop .3s ease}
 .m-media.v video{aspect-ratio:auto;max-width:460px}
 @media(max-width:820px){
  .burger{display:flex}
- nav{position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;padding:8px 5vw 22px;background:var(--cream);border-bottom:1px solid var(--sand);max-height:calc(100svh - 64px);overflow:auto;transform:translateY(-12px);opacity:0;visibility:hidden;transition:transform .25s,opacity .25s,visibility 0s .25s}
+ nav{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;padding:8px 5vw 22px;background:var(--cream);border-bottom:1px solid var(--sand);max-height:calc(100svh - 64px);overflow:auto;transform:translateY(-12px);opacity:0;visibility:hidden;transition:transform .25s,opacity .25s,visibility 0s .25s}
  nav.open{transform:none;opacity:1;visibility:visible;transition:transform .25s,opacity .25s}
  nav a{padding:13px 0;font-size:18px}
  nav a.btn{text-align:center;margin-top:12px;padding:12px 20px!important;font-size:16px}
