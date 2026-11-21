@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Toluwalase Iyekolo | Brand storyteller and content creator in Lagos</title>
-<meta name="description" content="Toluwalase Iyekolo is a Lagos-based creative working in brand storytelling, communications, social media management, marketing and video editing.">
+<meta name="description" content="Toluwalase Iyekolo is a Lagos-based creative working in brand storytelling, communications, marketing and video editing.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -17,7 +17,7 @@ a{color:inherit}
 .bb{font-family:'Bebas Neue',Impact,sans-serif;font-weight:400;line-height:.88;letter-spacing:.01em}
 header{position:fixed;inset:0 0 auto;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;background:rgba(250,244,239,.88);backdrop-filter:blur(8px)}
 header .logo{font-size:30px;text-decoration:none;color:var(--plum)}
-nav{display:flex;gap:26px;font-size:15px;font-weight:500}
+nav{display:flex;gap:18px;font-size:14px;font-weight:500}
 nav a{text-decoration:none}nav a:hover{text-decoration:underline;text-underline-offset:6px}
 .btn{display:inline-block;background:var(--plum);color:var(--cream);padding:13px 28px;border-radius:99px;text-decoration:none;font-weight:500;border:2px solid var(--plum);cursor:pointer;font:500 16px Poppins;transition:background .2s,color .2s}
 .btn:hover{background:transparent;color:var(--plum)}
@@ -47,6 +47,7 @@ h2{font-size:clamp(52px,9vw,120px);color:var(--plum);margin-bottom:22px}
 h2 .out{-webkit-text-stroke:1.5px var(--plum);color:transparent}
 .lead{max-width:60ch;font-size:19px}
 .about{display:grid;grid-template-columns:1.1fr .9fr;gap:6vw;align-items:center}
+.about-photo img{object-position:center 42%}
 .about-photo{aspect-ratio:4/5;background:linear-gradient(200deg,var(--clay),var(--sand));border-radius:200px 200px 24px 24px}
 .pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
 .pills span{border:1.5px solid var(--plum);color:var(--plum);padding:6px 16px;border-radius:99px;font-size:15px}
@@ -87,7 +88,7 @@ h2 .out{-webkit-text-stroke:1.5px var(--plum);color:transparent}
 .tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:40px}
 .tool{background:var(--plum);color:var(--cream);padding:28px;border-radius:28px}
 .tool h3{font-size:30px;color:var(--clay);margin-bottom:12px}
-.tool li{list-style:none;padding:6px 0;border-bottom:1px solid rgba(250,244,239,.18)}
+.tool li{list-style:none;display:flex;align-items:center;gap:12px;padding:8px 0;border-bottom:1px solid rgba(250,244,239,.18)}
 /* contact */
 .contact{background:var(--plum);color:var(--cream);overflow:hidden}
 .contact h2{color:var(--cream)}.contact h2 .out{-webkit-text-stroke-color:var(--cream)}
@@ -106,6 +107,7 @@ dialog[open]{animation:pop .3s ease}
 .m-body h3{font-size:clamp(42px,7vw,76px);color:var(--plum);margin-bottom:14px}
 .m-body p{margin-bottom:14px;max-width:62ch}
 .pts{margin:6px 0 18px 20px;max-width:62ch}.pts li{margin-bottom:8px}.rl{display:flex;flex-wrap:wrap;gap:8px}.btn.sm{padding:6px 16px;font-size:14px}
+.ic{width:34px;height:34px;flex:none}.camp.art{grid-template-columns:1fr auto}.post small{position:relative;color:var(--clay);font-size:14px;margin-bottom:6px}
 .m-media{background:#000;display:grid;place-items:center}
 .m-media video,.m-media iframe{width:100%;max-height:82vh;aspect-ratio:16/9;border:0;background:#000}
 .m-media.v video{aspect-ratio:auto;max-width:460px}
@@ -113,7 +115,7 @@ dialog[open]{animation:pop .3s ease}
  nav a:not(.btn){display:none}
  .about{grid-template-columns:1fr}
  .hero .photo{height:46vh;right:50%;transform:translateX(50%);opacity:.35}
- .camp{grid-template-columns:90px 1fr}.camp .go{display:none}
+ .camp{grid-template-columns:90px 1fr}.camp.art{grid-template-columns:1fr}.camp .go{display:none}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
@@ -123,7 +125,7 @@ dialog[open]{animation:pop .3s ease}
 <header>
   <a class="logo bb" href="#top" aria-label="Toluwalase Iyekolo, home">Toluwalase</a>
   <nav>
-    <a href="#about">About</a><a href="#work">Campaigns</a><a href="#reels">Videos</a><a href="#posts">Viral posts</a><a href="#tools">Tools</a>
+    <a href="#about">About</a><a href="#work">Projects</a><a href="#reels">Videos</a><a href="#posts">Viral posts</a><a href="#personal">Personal brands</a><a href="#editorial">Editorial</a><a href="#tools">Tools</a>
     <a class="btn" href="#contact" style="padding:7px 20px;color:var(--cream)">Work with me</a>
   </nav>
 </header>
@@ -131,23 +133,22 @@ dialog[open]{animation:pop .3s ease}
 <main id="top">
 <div class="hero">
   <div class="arc a1"></div><div class="arc a2"></div><div class="arc a3"></div>
-  <div class="photo"><img src="images/tolu-hero.png" alt="Toluwalase Iyekolo smiling" onerror="this.remove()"></div>
+  <div class="photo"><img src="images/tolu-hero.jpg" alt="Toluwalase Iyekolo smiling" onerror="this.remove()"></div>
   <div class="hero-text">
     <p class="hi">Hi, my name is</p>
     <h1 class="bb"><span class="n1">Iyekolo</span><span class="n2">Toluwalase</span></h1>
-    <p class="roles">Brand storytelling, communications, social media management, marketing and video editing.</p>
+    <p class="roles">Brand storytelling, communications, marketing and video editing.</p>
     <div class="cta"><a class="btn" href="#work">See my work</a><a class="btn o" href="#contact">Start a project</a></div>
-    <div class="stats"><div><b>4</b><span>brands and campaigns<br>featured below</span></div><div><b>20</b><span>states reached with<br>Girls Beyond Limit 2.0</span></div></div>
-  </div>
+      </div>
 </div>
 
 <section id="about" class="about">
   <div>
     <h2 class="bb">About <span class="out">me</span></h2>
     <p class="lead">I'm a creative based in Lagos, Nigeria, passionate about storytelling and bringing ideas to life. I work across creative ideation, content development, visual storytelling and video production, crafting narratives that connect brands with people and communicate their messages with intention.</p>
-    <div class="pills"><span>Creative ideation</span><span>Content development</span><span>Visual storytelling</span><span>Video production</span><span>Social media management</span></div>
+    <div class="pills"><span>Creative ideation</span><span>Content development</span><span>Visual storytelling</span><span>Video production</span><span>Marketing</span><span>Brands and communication</span></div>
   </div>
-  <div class="about-photo"><img src="images/tolu-about.png" alt="Portrait of Toluwalase Iyekolo" onerror="this.remove()"></div>
+  <div class="about-photo"><img src="images/tolu-about.jpg" alt="Portrait of Toluwalase Iyekolo" onerror="this.remove()"></div>
 </section>
 
 <section class="mission">
@@ -157,14 +158,14 @@ dialog[open]{animation:pop .3s ease}
 </section>
 
 <section id="work">
-  <h2 class="bb">Campaigns <span class="out">I've worked on</span></h2>
+  <h2 class="bb">Projects <span class="out">I have worked on</span></h2>
   <p class="lead">Select a project to read what I did and the role I played.</p>
   <div class="camps" id="camps"></div>
 </section>
 
 <section id="reels" class="reels">
   <h2 class="bb">Video <span class="out">content</span></h2>
-  <p class="lead">Event coverage, creative content and interviews for different brands. Select a video to watch it here.</p>
+  <p class="lead">Event coverage, creative content and interviews for different brands.<br>Select a video to watch it here.</p>
   <div class="rgrid" id="reels-grid"></div>
 </section>
 
@@ -174,13 +175,25 @@ dialog[open]{animation:pop .3s ease}
   <div class="pgrid" id="posts-grid"></div>
 </section>
 
+<section id="personal">
+  <h2 class="bb">Personal brand <span class="out">content</span></h2>
+  <p class="lead">Content creation and creative execution for the Instagram pages of people building their own personal brands.</p>
+  <div class="pgrid" id="personal-grid"></div>
+</section>
+
+<section id="editorial" class="reels">
+  <h2 class="bb">Editorial and <span class="out">blog writing</span></h2>
+  <p class="lead">Written editorial samples I developed for NBG Africa's proposed blog.<br>Select a piece to read it.</p>
+  <div class="camps" id="art-grid"></div>
+</section>
+
 <section id="tools">
   <h2 class="bb">Tools <span class="out">I work with</span></h2>
   <p class="lead">The tools I use to craft your story and share it with your target audience.</p>
   <div class="tools">
-    <div class="tool"><h3 class="bb">Content creation</h3><ul><li>CapCut</li><li>Canva</li></ul></div>
-    <div class="tool"><h3 class="bb">Social media and content management</h3><ul><li>TikTok</li><li>X</li><li>Instagram</li><li>LinkedIn</li></ul></div>
-    <div class="tool"><h3 class="bb">Content planning</h3><ul><li>Google Docs</li><li>Notion</li><li>Google Sheets</li></ul></div>
+    <div class="tool"><h3 class="bb">Content creation</h3><ul><li><svg class="ic" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#fff"/><path d="M10 14l20 12M10 26l20-12" stroke="#000" stroke-width="3.5" stroke-linecap="round"/></svg>CapCut</li><li><svg class="ic" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#6D3FF2"/><text x="20" y="26" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-weight="700" font-size="17" fill="#fff">Ca</text></svg>Canva</li></ul></div>
+    <div class="tool"><h3 class="bb">Publishing platforms</h3><ul><li><svg class="ic" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#000"/><path d="M21 10v14a4.5 4.5 0 1 1-4.5-4.5M21 10c.5 3.5 3 5.5 6.5 5.7" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round"/></svg>TikTok</li><li><svg class="ic" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#000"/><path d="M12 11l16 18M28 11L12 29" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg>X</li><li><svg class="ic" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="igg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#FEDA75"/><stop offset=".4" stop-color="#FA7E1E"/><stop offset=".65" stop-color="#D62976"/><stop offset="1" stop-color="#4F5BD5"/></linearGradient></defs><rect width="40" height="40" rx="11" fill="url(#igg)"/><rect x="9" y="9" width="22" height="22" rx="7" fill="none" stroke="#fff" stroke-width="2.6"/><circle cx="20" cy="20" r="5.2" fill="none" stroke="#fff" stroke-width="2.6"/><circle cx="27" cy="13" r="1.6" fill="#fff"/></svg>Instagram</li><li><svg class="ic" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="8" fill="#0A66C2"/><text x="20" y="28" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="20" fill="#fff">in</text></svg>LinkedIn</li></ul></div>
+    <div class="tool"><h3 class="bb">Content planning</h3><ul><li><svg class="ic" viewBox="0 0 40 40" aria-hidden="true"><path d="M9 3h16l8 8v26H9z" fill="#4285F4"/><path d="M25 3l8 8h-8z" fill="#A1C2FA"/><path d="M14 20h14M14 25h14M14 30h9" stroke="#fff" stroke-width="2.2"/></svg>Google Docs</li><li><svg class="ic" viewBox="0 0 40 40" aria-hidden="true"><rect x="3" y="3" width="34" height="34" rx="6" fill="#fff" stroke="#000" stroke-width="2.5"/><text x="20" y="29" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="22" fill="#000">N</text></svg>Notion</li><li><svg class="ic" viewBox="0 0 40 40" aria-hidden="true"><path d="M9 3h16l8 8v26H9z" fill="#0F9D58"/><path d="M25 3l8 8h-8z" fill="#87CEAC"/><rect x="14" y="19" width="14" height="12" fill="none" stroke="#fff" stroke-width="2"/><path d="M14 25h14M21 19v12" stroke="#fff" stroke-width="2"/></svg>Google Sheets</li></ul></div>
   </div>
 </section>
 
@@ -190,8 +203,8 @@ dialog[open]{animation:pop .3s ease}
   <p class="lead">Tell me about your brand, your campaign or your next event. I'll get back to you.</p>
   <div class="cta" style="margin-top:30px">
     <a class="btn" href="mailto:iyekolotoluwalase@gmail.com?subject=Project%20enquiry">Email me</a>
-    <a class="btn o" href="https://wa.me/2349165615518" target="_blank" rel="noopener">WhatsApp 0916 561 5518</a>
-    <a class="btn o" href="https://www.linkedin.com/in/" target="_blank" rel="noopener" id="li">LinkedIn</a>
+    <a class="btn o" href="https://wa.me/2349088977207" target="_blank" rel="noopener">WhatsApp 0908 897 7207</a>
+    <a class="btn o" href="https://www.linkedin.com/in/toluwalase-iyekolo" target="_blank" rel="noopener" id="li">LinkedIn</a>
   </div>
 </section>
 </main>
@@ -206,14 +219,15 @@ dialog[open]{animation:pop .3s ease}
    Videos: put an .mp4 in /videos and set src:"videos/name.mp4",
    or use a YouTube video ID with yt:"VIDEO_ID". */
 const CAMPAIGNS=[
- {t:"Girls Beyond Limit 2.0",img:"images/gbl.jpg",tag:"SheCanDo: Dream. Solve. Lead.",d:"The campaign aimed to reach girls across 20 states in Nigeria. My role involved coordinating state-level volunteer recruitment, exploring creative approaches to securing sponsorships, and overseeing the social media team to support campaign awareness and communication.",pts:["A future vision and problem-solving workshop for girls, running 21 to 25 October","The goal was to reach 10,000 girls across 20 states, up from over 6,000 the year before","The media strategy covered graphics, video and social media: the program announcement, calls for volunteers and sponsors, a recap of last year, and daily countdowns"],link:"presentations/gbl-media-strategy.pdf"},
- {t:"GOtv Jam Festival",img:"images/jam.jpg",tag:"GOtv Boxing Night, 26 December",d:"A boxing and entertainment festival campaign. I collaborated with the digital media team to develop creative marketing ideas, create promotional content, and explore influencer collaborations to increase awareness and encourage ticket purchases online.",pts:["A three-month roadmap from October to December, building to the event on 26 December","October set the stage with throwbacks and teasers, November built hype with influencers, skits and early bird tickets, and December pushed countdowns and final ticket sales","The event day plan covered a live digital takeover, influencer coverage and third-party media partners"]},
- {t:"BBN Prize Presentation",img:"images/bbn.jpg",tag:"Event coverage for NBG Africa",d:"An event coverage project documenting the Big Brother prize presentation for NBG Africa's digital platforms. I worked with the team on event coverage and content production, capturing key moments and helping develop engaging content to communicate the event experience to the brand's online audience.",pts:["Covered housemate and guest arrivals, a quick-fire trivia segment, and the prize handover","Edited short videos and published them in real time to keep the online audience updated","Watch the content that was posted below"],reels:["DPgUqX1iDwQ","DPgVEQkCFUQ","DPgXUXqCLxG","DPgXdz2iPQ1","DPgYtwPiBE_","DPgaXOLCKm_","DPgev0vCG9Z","DPgkdy6CERB","DPgoWe1iG2R","DPg6W5GiHx8","DPhFcFOCFUJ","DPhOKKwiLZS","DPhSguViKVM","DPifvE0CGte"],link:"presentations/bbn-live-prize-presentation.pdf"}
+ {t:"Girls Beyond Limit 2.0",img:"images/gbl.jpg",tag:"SheCanDo: Dream. Solve. Lead.",d:"The campaign aimed to reach girls across 20 states in Nigeria. My role involved coordinating state-level volunteer recruitment, exploring creative approaches to securing sponsorships, and overseeing the social media team to support campaign awareness and communication.",link:"presentations/gbl-media-strategy.pdf"},
+ {t:"GOtv Jam Festival",img:"images/jam.jpg",tag:"Boxing and entertainment festival",d:"A boxing and entertainment festival campaign. I collaborated with the digital media team to develop creative marketing ideas, create promotional content, and explore influencer collaborations to increase awareness and encourage ticket purchases online.",link:"presentations/gotv-campaign-roadmap.pdf"},
+ {t:"BBN Prize Presentation",img:"images/bbn.jpg",tag:"Event coverage for NBG Africa",d:"An event coverage project documenting the Big Brother prize presentation for NBG Africa's digital platforms. I worked with the team on event coverage and content production, capturing key moments and helping develop engaging content to communicate the event experience to the brand's online audience.",reels:["DPgUqX1iDwQ","DPgVEQkCFUQ","DPgXUXqCLxG","DPgXdz2iPQ1","DPgYtwPiBE_","DPgaXOLCKm_","DPgev0vCG9Z","DPgkdy6CERB","DPgoWe1iG2R","DPg6W5GiHx8","DPhFcFOCFUJ","DPhOKKwiLZS","DPhSguViKVM","DPifvE0CGte"],link:"presentations/bbn-live-prize-presentation.pdf"}
 ];
+/* Videos: ig = Instagram reel code. src = an .mp4 in the /videos folder (plays on the site; falls back to Instagram if the file is missing). */
 const VIDEOS=[
  {t:"TNT Files",s:"Video coverage",img:"images/tnt.jpg",ig:"DeZeYfFMjew"},
- {t:"Multichoice x Kuramo College",s:"Video content",img:"images/multichoice.jpg",ig:"DQZ21B8iGqg"},
- {t:"Cakes by Yosola",s:"Video coverage",img:"images/yosola.jpg",ig:"Debpv1ABtU2"},
+ {t:"Multichoice x Kuramo College",s:"Video content",img:"images/multichoice.jpg",ig:"DQZ21B8iGqg",src:"videos/multichoice-kuramo.mp4"},
+ {t:"Cakes by Yosola",s:"Video coverage",img:"images/yosola.jpg",ig:"Debpv1ABtU2",src:"videos/cakes-by-yosola.mp4"},
  {t:"NBG Africa x BBN",s:"Video coverage",img:"images/nbg-interview.jpg",ig:"DPhFcFOCFUJ"}
 ];
 const POSTS=[
@@ -222,20 +236,36 @@ const POSTS=[
  {t:"Unforgettable Big Brother friendships that defined the show",img:"images/post3.jpg",url:"https://www.instagram.com/p/DPvy5vekW5Q/"},
  {t:"Iconic siblings that keep serving family goals",img:"images/post4.jpg",url:"https://www.instagram.com/p/DQJDnNLiN0q/"}
 ];
+/* Personal brands: replace the sample entries with the real people and their Instagram pages. */
+const PERSONAL=[
+ {n:"Name of person 1",h:"@instagram_handle",d:"Content creation and creative execution for their Instagram page.",img:"images/person1.jpg",url:"https://www.instagram.com/"},
+ {n:"Name of person 2",h:"@instagram_handle",d:"Content creation and creative execution for their Instagram page.",img:"images/person2.jpg",url:"https://www.instagram.com/"},
+ {n:"Name of person 3",h:"@instagram_handle",d:"Content creation and creative execution for their Instagram page.",img:"images/person3.jpg",url:"https://www.instagram.com/"}
+];
+/* Editorial: replace the sample entries with your real articles. body = paragraphs. link = optional Google Doc link. */
+const EDITORIAL=[
+ {t:"Article title 1",tag:"Written for NBG Africa's proposed blog",body:["Paste the article here, one paragraph per entry."],link:""},
+ {t:"Article title 2",tag:"Written for NBG Africa's proposed blog",body:["Paste the article here, one paragraph per entry."],link:""},
+ {t:"Article title 3",tag:"Written for NBG Africa's proposed blog",body:["Paste the article here, one paragraph per entry."],link:""}
+];
 /* =================================== */
 const $=s=>document.querySelector(s),dlg=$('#dlg'),box=$('#dlg-in');
 const img=(src,alt="")=>`<img src="${src}" alt="${alt}" loading="lazy" onerror="this.remove()">`;
 $('#camps').innerHTML=CAMPAIGNS.map((c,i)=>`<button class="camp" data-i="${i}"><div class="th">${img(c.img,c.t)}</div><div><h3 class="bb">${c.t}</h3><p>${c.tag}</p></div><span class="go">Read more</span></button>`).join('');
 $('#reels-grid').innerHTML=VIDEOS.map((v,i)=>`<button class="reel" data-v="${i}" aria-label="Play ${v.t}">${img(v.img,"")}<span class="play"></span><span class="cap"><b>${v.t}</b><span>${v.s}</span></span></button>`).join('');
 $('#posts-grid').innerHTML=POSTS.map(p=>`<a class="post" href="${p.url}" target="_blank" rel="noopener">${img(p.img,"")}<b>${p.t}</b><span>View on Instagram</span></a>`).join('');
+$('#personal-grid').innerHTML=PERSONAL.map(p=>`<a class="post" href="${p.url}" target="_blank" rel="noopener">${img(p.img,"")}<small>${p.h}</small><b>${p.n}</b><span>${p.d}</span></a>`).join('');
+$('#art-grid').innerHTML=EDITORIAL.map((a,i)=>`<button class="camp art" data-a="${i}"><div><h3 class="bb">${a.t}</h3><p>${a.tag}</p></div><span class="go">Read</span></button>`).join('');
 function open(h){box.innerHTML=h;dlg.showModal()}
 function shut(){box.innerHTML="";dlg.close()}
+const igBox=(id,t,sub)=>`<div class="m-media v" style="background:var(--cream)"><iframe src="https://www.instagram.com/reel/${id}/embed" style="width:100%;max-width:420px;height:min(78vh,720px);aspect-ratio:auto;background:#fff" allow="autoplay;fullscreen" allowfullscreen title="${t||'Reel'}"></iframe></div><div class="m-body" style="padding:18px 30px">${t?`<h3 class="bb" style="font-size:40px;margin:0">${t}</h3><p style="margin:0 0 10px">${sub}</p>`:""}<a class="btn o" href="https://www.instagram.com/reel/${id}/" target="_blank" rel="noopener">Watch on Instagram</a></div>`;
+window.igFall=i=>{const p=VIDEOS[i];box.innerHTML=igBox(p.ig,p.t,p.s)};
 document.addEventListener('click',e=>{
- const g=e.target.closest('[data-ig]');if(g){const id=g.dataset.ig;open(`<div class="m-media v" style="background:var(--cream)"><iframe src="https://www.instagram.com/reel/${id}/embed" style="width:100%;max-width:420px;height:min(78vh,720px);aspect-ratio:auto;background:#fff" allow="autoplay;fullscreen" allowfullscreen title="Reel"></iframe></div><div class="m-body" style="padding:18px 30px"><a class="btn o" href="https://www.instagram.com/reel/${id}/" target="_blank" rel="noopener">Watch on Instagram</a></div>`);return}
- const c=e.target.closest('.camp'),v=e.target.closest('.reel');
- if(c){const p=CAMPAIGNS[c.dataset.i];open(`<div class="m-body"><h3 class="bb">${p.t}</h3><p><strong>${p.tag}</strong></p><p>${p.d}</p><ul class="pts">${p.pts.map(x=>`<li>${x}</li>`).join("")}</ul>${p.reels?`<div class="rl">${p.reels.map((r,k)=>`<button class="btn o sm" data-ig="${r}">Reel ${k+1}</button>`).join("")}</div>`:""}<div class="cta" style="margin-top:20px">${p.link?`<a class="btn" href="${p.link}" target="_blank" rel="noopener">View the full presentation</a>`:""}<a class="btn o" href="#contact" onclick="shut()">Talk to me about a similar project</a></div></div>`)}
- if(v){const p=VIDEOS[v.dataset.v];if(p.ig){open(`<div class="m-media v" style="background:var(--cream)"><iframe src="https://www.instagram.com/reel/${p.ig}/embed" style="width:100%;max-width:420px;height:min(78vh,720px);aspect-ratio:auto;background:#fff" allow="autoplay;fullscreen" allowfullscreen title="${p.t}"></iframe></div><div class="m-body" style="padding:18px 30px"><h3 class="bb" style="font-size:40px;margin:0">${p.t}</h3><p style="margin:0 0 10px">${p.s}</p><a class="btn o" href="https://www.instagram.com/reel/${p.ig}/" target="_blank" rel="noopener">Watch on Instagram</a></div>`);return}
- open(`<div class="m-media">${p.yt?`<iframe src="https://www.youtube-nocookie.com/embed/${p.yt}?autoplay=1" allow="autoplay;fullscreen" allowfullscreen title="${p.t}"></iframe>`:`<video src="${p.src}" controls autoplay playsinline></video>`}</div><div class="m-body" style="padding:22px 30px"><h3 class="bb" style="font-size:44px;margin:0">${p.t}</h3><p style="margin:0">${p.s}</p></div>`)}
+ const g=e.target.closest('[data-ig]');if(g){open(igBox(g.dataset.ig));return}
+ const c=e.target.closest('.camp[data-i]'),v=e.target.closest('.reel'),a=e.target.closest('[data-a]');
+ if(c){const p=CAMPAIGNS[c.dataset.i];open(`<div class="m-body"><h3 class="bb">${p.t}</h3><p><strong>${p.tag}</strong></p><p>${p.d}</p>${p.reels?`<p><strong>Watch the content that was posted</strong></p><div class="rl">${p.reels.map((r,k)=>`<button class="btn o sm" data-ig="${r}">Reel ${k+1}</button>`).join("")}</div>`:""}${p.link?`<div class="cta" style="margin-top:22px"><a class="btn" href="${p.link}" target="_blank" rel="noopener">View further details</a></div>`:""}</div>`)}
+ if(a){const p=EDITORIAL[a.dataset.a];open(`<div class="m-body"><h3 class="bb">${p.t}</h3><p><strong>${p.tag}</strong></p>${p.body.map(x=>`<p>${x}</p>`).join("")}${p.link?`<a class="btn" href="${p.link}" target="_blank" rel="noopener">Read the full piece</a>`:""}</div>`)}
+ if(v){const i=v.dataset.v,p=VIDEOS[i];if(p.src){open(`<div class="m-media"><video src="${p.src}" controls autoplay playsinline onerror="igFall(${i})"></video></div><div class="m-body" style="padding:18px 30px"><h3 class="bb" style="font-size:40px;margin:0">${p.t}</h3><p style="margin:0 0 10px">${p.s}</p><a class="btn o" href="https://www.instagram.com/reel/${p.ig}/" target="_blank" rel="noopener">Watch on Instagram</a></div>`)}else open(igBox(p.ig,p.t,p.s))}
 });
 $('#close').onclick=shut;
 dlg.addEventListener('click',e=>{if(e.target===dlg)shut()});
